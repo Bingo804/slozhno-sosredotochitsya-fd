@@ -8,7 +8,6 @@
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-  gap: 39px;
 }
 
 /* Стили Header */
@@ -140,6 +139,7 @@
 /* Стили main */
 
 .main {
+  margin-block-start: 39px;
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
@@ -208,9 +208,10 @@
 /* Стили footer */
 
 footer {
-  height: 10vh;
+  height: 100vh;
   position: relative;
   min-height: 668px;
+  margin-block-start: 43px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,9 +240,6 @@ footer {
 }
 
 @media (width >= 768px) {
-  .page {
-    gap: 60px;
-  }
   /* Планшетные стили для header */
 
 .header {
@@ -292,6 +290,7 @@ footer {
 /* Планшетные стили для main */
 
 .main {
+margin-block-start: 60px;
 padding: 0px 20px 0 20px;
 gap: 37px;
 }
@@ -394,6 +393,7 @@ gap: 37px;
 }
 .footer {
   min-height: 1024px;
+  margin-block-start: 60px;
 }
 .footer__title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
