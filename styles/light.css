@@ -10,14 +10,28 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --cover-image: url("../images/cover-image-light.png");
-  --color-bg:#FFF1F7;
-  --font-size: 1.125rem;
-  --font-family-ibm: 'IBM Plex mono';
+  --color-bg: #fff1f7;
   --accent-color: #ff8dcb;
-  --color-title: #FFC2E6;
+  --color-title: #ffc2e6;
   --color-text: #353430;
   --color-menu: #353430;
-  --color-card-title:#353430;
+  --color-card-title: #353430;
   --color-button-hover: rgba(53, 52, 48, 0.4);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --cover-image: url("../images/cover-image-light.png");
+    --color-bg: #fff1f7;
+    --accent-color: #ff8dcb;
+    --color-title: #ffc2e6;
+    --color-text: #353430;
+    --color-menu: #353430;
+    --color-card-title: #353430;
+    --color-button-hover: rgba(53, 52, 48, 0.4);
+  }
+}
+
+:root.theme-light .header__text-dark {
+  display: none;
+}
