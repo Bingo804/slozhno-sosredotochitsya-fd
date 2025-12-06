@@ -30,6 +30,9 @@
     --color-card-title: #353430;
     --color-button-hover: rgba(53, 52, 48, 0.4);
   }
+  .header__text-dark {
+    display: none;
+  }
 }
 
 :root.theme-light .header__text-dark {

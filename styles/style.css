@@ -68,6 +68,7 @@
 .header__theme-menu {
   justify-self: end;
   padding-block-start: 50px;
+  padding-inline-end: 6px;
 }
 
 .header__theme-menu-list {
@@ -77,6 +78,8 @@
   padding-top: 32%;
   padding-right: 1vw;
   font-size: var(--font-size);
+  justify-content: center;
+  align-items: center;
 }
 
 .header__theme-menu-button {
@@ -106,7 +109,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   display: flex;
   flex-direction: column;
-  line-height: 6rem;
+  line-height: 83%;
   justify-content: center;
   padding-left: 12px;
   color: var(--color-title);
@@ -120,6 +123,7 @@
   padding-top: 55px;
   padding-left: 10px;
   padding-right: 10px;
+  line-height: 23.4px;
 }
 
 .title-decor {
@@ -163,8 +167,7 @@
   margin-block-start: 48px;
 }
 .card__title,
-.section__title-secondary,
-.card__title-mod {
+.section__title-secondary {
   background-color: var(--accent-color);
   margin-top: 21px;
   color: var(--color-card-title);
@@ -181,6 +184,9 @@
 
 .card__title-mod {
   font-weight: 400;
+  background-color: var(--accent-color);
+  margin-top: 21px;
+  color: var(--color-card-title);
 }
 
 .section__image {
@@ -190,10 +196,6 @@
 .card__image {
   display: flex;
   flex-direction: column;
-}
-
-.card__image .card__title {
-  margin-top: 0px;
 }
 
 .card__image-group {
@@ -211,7 +213,7 @@
 
 /* Стили footer */
 
-footer {
+.footer {
   height: 100vh;
   position: relative;
   min-height: 668px;
@@ -219,11 +221,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--color-bg);
 }
 .footer__title {
-  color: var(--color-title);
-  text-shadow: 4px 4px 0 var(--accent-color);
   align-self: center;
   justify-self: center;
   padding-left: 0px;
@@ -235,7 +234,7 @@ footer {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 .description-link:hover {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--color-text);
 }
 .description-link:focus-visible {
   outline: 1px solid var(--color-text);
@@ -261,7 +260,8 @@ footer {
     grid-column: 1 / 3;
     grid-row: 1;
     align-self: center;
-    padding-block-end: 8vw;
+    padding-block-end: 63px;
+    padding-inline-end: 6px;
   }
 
   .header__text-dark {
@@ -285,7 +285,7 @@ footer {
     padding-left: 0px;
     grid-row: 3;
     padding-right: 20px;
-    padding-block-start: 164px;
+    padding-block-start: 161px;
   }
 
   /* Планшетные стили для main */
@@ -312,13 +312,6 @@ footer {
   }
   .card__title-secondary {
     margin: 0px;
-  }
-  .card__title-dopamine {
-    margin-top: 22px;
-  }
-
-  .card__description-dopamine {
-    margin-top: 0px;
   }
 
   /* Секция what */
@@ -362,11 +355,7 @@ footer {
     gap: 20px;
     margin-top: 20px;
   }
-  .card__image-group img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: cover;
-  }
+
   .card__image:nth-child(1) {
     grid-column: 1/3;
     grid-row: 1;
@@ -406,7 +395,8 @@ footer {
   .header__theme-menu {
     align-self: start;
     justify-self: center;
-    padding-block-start: 17px;
+    padding-block-start: 18px;
+    padding-inline-start: 6px;
   }
 
   .header__theme-menu-list {
@@ -414,6 +404,8 @@ footer {
     flex-direction: row;
     gap: 21px;
     padding-inline-start: 8px;
+    align-items: center;
+    justify-content: center;
   }
 
   .header__title {
@@ -424,7 +416,7 @@ footer {
 
   .header__description {
     padding-right: 2vw;
-    padding-top: 130px;
+    padding-top: 114px;
   }
 
   /*main для ПК версии */
@@ -459,14 +451,19 @@ footer {
   /* section how */
   .section-how {
     grid-template-columns: minmax(315px, min-content) 1fr;
+    margin-block-start: 42px;
   }
   .card__title-mod {
     margin-top: 21px;
   }
 
   /* section image */
+  .section__image {
+    min-width: 100%;
+    min-height: 100%;
+  }
   .card__image-group {
-    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
   }
 
   /* footer */
